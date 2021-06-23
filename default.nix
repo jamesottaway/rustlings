@@ -1,6 +1,8 @@
 { lib, stdenv, rustPlatform, darwin }:
 
-let nixignore = [ ./exercises ./target ./default.nix ./shell.nix ];
+let
+  nixignore =
+    [ ./exercises ./target ./default.nix ./flake.nix ./flake.lock ./shell.nix ];
 
 in rustPlatform.buildRustPackage {
   pname = "rustlings";
