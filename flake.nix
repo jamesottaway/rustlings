@@ -8,6 +8,8 @@
     utils.lib.simpleFlake {
       inherit self nixpkgs;
       name = "rustlings";
+      overlay = ./overlay.nix;
+      shell = ./shell.nix;
       systems = utils.lib.defaultSystems;
     };
 }
